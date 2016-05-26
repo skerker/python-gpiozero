@@ -72,11 +72,12 @@ class AnalogInputDevice(SPIDevice):
     .. _analog to digital converters: https://en.wikipedia.org/wiki/Analog-to-digital_converter
     """
 
-    def __init__(self, bits=None, **spi_args):
+    def __init__(self, bits=None, max_voltage=3.3, **spi_args):
         if bits is None:
             raise InputDeviceError('you must specify the bit resolution of the device')
         self._bits = bits
         super(AnalogInputDevice, self).__init__(shared=True, **spi_args)
+        self._max_voltage = max_voltage
 
     @property
     def bits(self):
@@ -102,6 +103,13 @@ class AnalogInputDevice(SPIDevice):
         The raw value as read from the device.
         """
         return self._read()
+
+    @property
+    def voltage(self):
+        """
+        The current voltage read from the device
+        """
+        return self.value * self._max_voltage
 
 
 class MCP3xxx(AnalogInputDevice):
