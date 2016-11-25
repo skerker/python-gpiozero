@@ -43,6 +43,13 @@ TrafficLights
     :inherited-members:
     :members:
 
+Xmas Tree
+=========
+
+.. autoclass:: XmasTree
+    :inherited-members:
+    :members:
+
 LedBorg
 =======
 
@@ -168,4 +175,3 @@ CompositeDevice
 
 .. autoclass:: CompositeDevice(\*args, _order=None, \*\*kwargs)
     :members:
-
