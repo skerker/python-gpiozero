@@ -23,6 +23,7 @@ digraph classes {
 
     PiLiter->LEDBoard;
     PiLiterBarGraph->LEDBarGraph;
+    XmasTree->LEDBoard;
     TrafficLights->LEDBoard;
     PiTraffic->TrafficLights;
     PiStop->TrafficLights;
