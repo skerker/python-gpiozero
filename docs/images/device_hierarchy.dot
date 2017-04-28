@@ -77,9 +77,11 @@ digraph classes {
     LEDBarGraph->LEDCollection;
     PiLiter->LEDBoard;
     PiLiterBarGraph->LEDBarGraph;
+    StatusZero->LEDBoard;
     TrafficLights->LEDBoard;
     PiTraffic->TrafficLights;
     TrafficLightsBuzzer->CompositeOutputDevice;
+    StatusBoard->CompositeOutputDevice;
     FishDish->TrafficLightsBuzzer;
     TrafficHat->TrafficLightsBuzzer;
     Robot->CompositeDevice;
@@ -96,4 +98,3 @@ digraph classes {
     TimeOfDay->InternalDevice;
     PingServer->InternalDevice;
 }
-
